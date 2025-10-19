@@ -1,0 +1,13 @@
+{
+  "name": "file-sink-connector",
+  "config": {
+    "connector.class": "FileStreamSink",
+    "tasks.max": "1",
+    "file": "/tmp/data/users-output.json",
+    "topics": "postgres-users",
+    "key.converter": "org.apache.kafka.connect.json.JsonConverter",
+    "value.converter": "org.apache.kafka.connect.json.JsonConverter",
+    "key.converter.schemas.enable": "false",
+    "value.converter.schemas.enable": "false"
+  }
+}
